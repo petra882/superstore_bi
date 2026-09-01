@@ -42,7 +42,7 @@
 ### 1. Клонировать репозиторий
 ```bash
 git clone https://github.com/your-username/superstore-analytics.git
-cd superstore-analytics
+cd superstore-analytics```
 ### 2. Поднять postgresql через docker
 docker-compose up -d
 ### 3. Применить схему базы данных
