@@ -36,18 +36,25 @@
 Все связи реализованы через числовые ID для производительности.
 
 ---
+![Внешний вид дашборда](screenshots/dashboard.PNG)
+---
 
 ## Как запустить проект
 
 ### 1. Клонировать репозиторий
 ```bash
 git clone https://github.com/your-username/superstore-analytics.git
-cd superstore-analytics```
+cd superstore-analytics
+```
 ### 2. Поднять postgresql через docker
+```
 docker-compose up -d
+```
 ### 3. Применить схему базы данных
+```
 docker cp schema.sql postgres_superstore:/tmp/schema.sql
 docker exec -it postgres_superstore psql -U postgres -d superstore -f /tmp/schema.sql
+```
 ### 4. Открыть файл с дашбордом
 
 ## Используемые технологии
@@ -56,5 +63,6 @@ Docker / Docker Compose
 WSL2 (Windows)
 Power BI Desktop (DirectQuery)
 DAX (базовые меры)
-Автор
+
+### Автор
 Артеменко Пётр, студент ТюмГУ
