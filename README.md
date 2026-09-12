@@ -66,3 +66,48 @@ DAX (базовые меры)
 
 ### Автор
 Артеменко Пётр, студент ТюмГУ
+
+# Superstore Analytics Project
+
+Full-cycle analytics project: from raw data to an interactive dashboard.
+
+## About the Project
+
+This project covers the complete data pipeline:
+
+- Deployed PostgreSQL in Docker
+- Loaded and cleaned raw data
+- Built a Star Schema data model
+- Created an interactive Power BI dashboard
+
+**Dataset:** Superstore Sales Dataset
+
+---
+
+## Architecture
+
+| Component | Technology |
+| :--- | :--- |
+| Data Storage | PostgreSQL 16 |
+| Orchestration | Docker / Docker Compose |
+| Visualization | Power BI Desktop (DirectQuery) |
+| Data Model | Star Schema (facts + dimensions) |
+
+---
+
+## Data Model
+
+The Star Schema consists of:
+
+- **Fact table:** `res` (sales, quantity, profit)
+- **Dimensions:**
+  - `dim_city` (geography: city, state, region, country)
+  - `dim_customer` (customers: ID, name, segment)
+  - `dim_product_category` (categories and subcategories)
+
+All relationships are implemented via numeric IDs for performance.
+
+---
+
+![Dashboard Preview](screenshots/dashboard.PNG)
+
